@@ -7,7 +7,7 @@ export class OrderByPipe implements PipeTransform {
     
     public transform(array: Array<any>, args?) {
 
-        if ( array.length ) {
+        if (array) {
 
             let orderByValue = args;
             let byVal = 1;
@@ -26,7 +26,6 @@ export class OrderByPipe implements PipeTransform {
                     return 0;
                 }
             });
-            
             return array;
         }
     }
